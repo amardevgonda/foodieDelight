@@ -1,0 +1,13 @@
+.restaurant-form {
+    padding: 16px;
+  }
+  
+  .mat-form-field {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  
+  button[mat-raised-button] {
+    margin-top: 16px;
+  }
+  

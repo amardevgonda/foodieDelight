@@ -1,0 +1,42 @@
+<!-- <div class="header">
+    <h1>Restaurant List</h1>
+    <button class="add-button" routerLink="/add">Add New Restaurant</button>
+  </div>
+  
+  <div class="restaurant-list">
+    <div *ngFor="let restaurant of restaurants" class="restaurant-card">
+      <h2>{{ restaurant.name }}</h2>
+      <p>{{ restaurant.description }}</p>
+      <p>{{ restaurant.location }}</p>
+      <div class="actions">
+        <button class="edit-button" [routerLink]="['/edit', restaurant.id]">Edit</button>
+        <button class="delete-button" (click)="deleteRestaurant(restaurant.id)">Delete</button>
+      </div>
+    </div>
+  </div>
+  
+  
+   -->
+
+   <div class="header">
+    <h1>Restaurant List</h1>
+    <button class="add-button" routerLink="/add">Add New Restaurant</button>
+  </div>
+  
+  <div class="search-bar" style="text-align: center;">
+    <input type="text" placeholder="Search..." [(ngModel)]="searchQuery" />
+  </div>
+  
+  <div class="restaurant-list">
+    <div *ngFor="let restaurant of filteredRestaurants()" class="restaurant-card">
+      <h2>{{ restaurant.name }}</h2>
+      <p>{{ restaurant.description }}</p>
+      <p>{{ restaurant.location }}</p>
+      <div class="actions">
+        <button class="details-button" [routerLink]="['/details', restaurant.id]">Details</button>
+        <button class="edit-button" [routerLink]="['/edit', restaurant.id]">Edit</button>
+        <button class="delete-button" (click)="deleteRestaurant(restaurant.id)">Delete</button>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,37 @@
+<div class="header">
+    <h1>{{ restaurantId ? 'Edit' : 'Add' }} Restaurant</h1>
+  </div>
+  
+  <div class="restaurant-form">
+    <form [formGroup]="restaurantForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input id="name" formControlName="name" />
+        <div *ngIf="restaurantForm.get('name')?.invalid && restaurantForm.get('name')?.touched" class="error">
+          Name is required
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="description">Description</label>
+        <textarea id="description" formControlName="description"></textarea>
+        <div *ngIf="restaurantForm.get('description')?.invalid && restaurantForm.get('description')?.touched" class="error">
+          Description is required
+        </div>
+      </div>
+  
+      <div class="form-group">
+        <label for="location">Location</label>
+        <input id="location" formControlName="location" />
+        <div *ngIf="restaurantForm.get('location')?.invalid && restaurantForm.get('location')?.touched" class="error">
+          Location is required
+        </div>
+      </div>
+  
+      <button type="submit" class="submit-button">
+        {{ restaurantId ? 'Update' : 'Add' }}
+      </button>
+    </form>
+  </div>
+  
+  
