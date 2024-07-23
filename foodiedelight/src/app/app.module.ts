@@ -9,12 +9,7 @@ import { RestaurantFormComponent } from './components/restaurant-form/restaurant
 import { RestaurantDetailsComponent } from './components/restaurant-details/restaurant-details.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
-import { MatCardModule } from '@angular/material/card';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-import { MatIconModule } from '@angular/material/icon';
+
 
 @NgModule({
   declarations: [
@@ -30,12 +25,6 @@ import { MatIconModule } from '@angular/material/icon';
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MatCardModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
